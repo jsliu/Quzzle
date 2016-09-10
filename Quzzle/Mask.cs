@@ -73,13 +73,3 @@ namespace Quzzle
         }
     }
 }
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Quzzle
-{
-    class Mask
-    {
-    }
-}
