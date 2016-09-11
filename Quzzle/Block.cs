@@ -5,8 +5,11 @@ namespace Quzzle
 {
     public class Block
     {
-        private static readonly int[] delta_right_ = { 0, 0, 0, 1, 1, 1, 0, 0, 0, 1 };
-        private static readonly int[] delta_bottom_ = { 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 };
+        //private static readonly int[] delta_right_ = { 0, 0, 0, 1, 1, 1, 0, 0, 0, 1 };
+        //private static readonly int[] delta_bottom_ = { 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 };
+
+        private static readonly int[] delta_right_ = { 0, 0, 1, 0, 1 };
+        private static readonly int[] delta_bottom_ = { 0, 0, 0, 1, 1 };
 
         private Shape shape_;
         private int top_, left_;
@@ -93,14 +96,10 @@ namespace Quzzle
             mask.set(value, top_, left_);
             switch (shape_)
             {
-                case Shape.kHorizon1:
-                case Shape.kHorizon2:
-                case Shape.kHorizon3:
+                case Shape.kHorizon:
                     mask.set(value, top_, left_ + 1);
                     break;
-                case Shape.kVertical1:
-                case Shape.kVertical2:
-                case Shape.kVertical3:
+                case Shape.kVertical:
                     mask.set(value, top_ + 1, left_);
                     break;
                 case Shape.kSquare:
@@ -109,7 +108,7 @@ namespace Quzzle
                     mask.set(value, top_ + 1, left_ + 1);
                     break;
                 default:
-                    Debug.Assert(shape_ == Shape.kSingle1 || shape_ == Shape.kSingle2);
+                    Debug.Assert(shape_ == Shape.kSingle);
                     break;
             };
         }

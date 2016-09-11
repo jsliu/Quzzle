@@ -67,6 +67,10 @@ namespace Quzzle
 
         public bool empty(int x, int y)
         {
+            if (x < 0 || x >= Globals.kRows)
+            {
+                x = 1;
+            }
             Debug.Assert(x >= 0 && x < Globals.kRows);
             Debug.Assert(y >= 0 && y < Globals.kColumns);
             return board_[x, y] == 0;

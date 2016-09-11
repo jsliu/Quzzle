@@ -1,5 +1,6 @@
 ﻿namespace Quzzle
 {
+    /*
     public enum Shape
     {
         kInvalid = 0,
@@ -12,5 +13,15 @@
         kVertical2 = 7,
         kVertical3 = 8,
         kSquare = 9,
+    }
+    */
+
+    public enum Shape
+    {
+        kInvalid = 0,
+        kSingle = 1,
+        kHorizon = 2,
+        kVertical = 3,
+        kSquare = 4,
     }
 }

@@ -9,14 +9,14 @@ namespace Quzzle
         {
             List<Block> blocks = new List<Block>();
             blocks.Add(new Block(Shape.kSquare, 0, 0));
-            blocks.Add(new Block(Shape.kHorizon1, 2, 0));
-            blocks.Add(new Block(Shape.kVertical1, 2, 1));
-            blocks.Add(new Block(Shape.kVertical2, 3, 1));
-            blocks.Add(new Block(Shape.kVertical3, 0, 3));
-            blocks.Add(new Block(Shape.kHorizon2, 1, 3));
-            blocks.Add(new Block(Shape.kHorizon3, 1, 4));
-            blocks.Add(new Block(Shape.kSingle1, 3, 3));
-            blocks.Add(new Block(Shape.kSingle2, 3, 4));
+            blocks.Add(new Block(Shape.kHorizon, 2, 0));
+            blocks.Add(new Block(Shape.kVertical, 2, 1));
+            blocks.Add(new Block(Shape.kVertical, 3, 1));
+            blocks.Add(new Block(Shape.kVertical, 0, 3));
+            blocks.Add(new Block(Shape.kHorizon, 1, 3));
+            blocks.Add(new Block(Shape.kHorizon, 1, 4));
+            blocks.Add(new Block(Shape.kSingle, 3, 3));
+            blocks.Add(new Block(Shape.kSingle, 3, 4));
 
             State initial = new State(blocks, 0);
             BFS bfs = new BFS(initial);
